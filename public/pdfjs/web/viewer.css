@@ -1750,7 +1750,7 @@
 :is(.annotationEditorLayer
   :is(.freeTextEditor, .inkEditor, .stampEditor, .highlightEditor),.textLayer) .editToolbar{
     --editor-toolbar-delete-image:url(images/editor-toolbar-delete.svg);
-    --editor-toolbar-bg-color:#f0f0f4;
+    --editor-toolbar-bg-color:#2b2b30;
     --editor-toolbar-highlight-image:url(images/toolbarButton-editorHighlight.svg);
     --editor-toolbar-fg-color:#2e2e56;
     --editor-toolbar-border-color:#8f8f9d;
@@ -3365,8 +3365,8 @@
   --toolbar-icon-hover-bg-color:rgb(0 0 0);
 
   --sidebar-narrow-bg-color:rgb(212 212 215 / 0.9);
-  --sidebar-toolbar-bg-color:rgb(245 246 247);
-  --toolbar-bg-color:rgb(249 249 250);
+  --sidebar-toolbar-bg-color:rgb(84, 86, 90);
+  --toolbar-bg-color:rgb(90, 90, 95);
   --toolbar-border-color:rgb(184 184 184);
   --toolbar-box-shadow:0 1px 0 var(--toolbar-border-color);
   --toolbar-border-bottom:none;
@@ -3467,8 +3467,8 @@
     --toolbar-icon-hover-bg-color:rgb(255 255 255);
 
     --sidebar-narrow-bg-color:rgb(42 42 46 / 0.9);
-    --sidebar-toolbar-bg-color:rgb(50 50 52);
-    --toolbar-bg-color:rgb(56 56 61);
+    --sidebar-toolbar-bg-color:rgb(92, 92, 97);
+    --toolbar-bg-color:rgb(88, 88, 95);
     --toolbar-border-color:rgb(12 12 13);
     --button-hover-color:rgb(102 102 103);
     --toggled-btn-color:rgb(255 255 255);
@@ -4523,6 +4523,20 @@ a:is(.toolbarButton, .secondaryToolbarButton)[href="#"]{
   width:40px;
   background-size:0 0;
   transition-property:none;
+  
+    background-color: transparent; /* Make background transparent */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    color: inherit; /* Inherit text color from parent */
+    padding: 10; /* Remove default padding */
+    font-size: inherit; /* Inherit font size from parent */
+
+
+/* Optional: Style the span if needed */
+.toolbarLabel {
+    font-family: Arial, sans-serif; /* Example font-family */
+    font-size: 16px; /* Example font-size */
+}
 }
 
 #pageNumber::-webkit-inner-spin-button{
@@ -4581,7 +4595,7 @@ a:is(.toolbarButton, .secondaryToolbarButton)[href="#"]{
 }
 
 #numPages.toolbarLabel{
-  padding-inline-start:3px;
+  padding-:5px;
 }
 
 #thumbnailView,
